@@ -44,7 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="All.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All.Designer.cs">
+      <DependentUpon>All.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conect.cs" />
+    <Compile Include="Dados.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +60,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scheduleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scheduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="scheduleDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scheduleDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="All.resx">
+      <DependentUpon>All.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +94,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="scheduleDataSet.xsc">
+      <DependentUpon>scheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="scheduleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scheduleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scheduleDataSet.xss">
+      <DependentUpon>scheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="scheduleDataSet1.xsc">
+      <DependentUpon>scheduleDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="scheduleDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scheduleDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scheduleDataSet1.xss">
+      <DependentUpon>scheduleDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
