@@ -40,5 +40,27 @@ namespace Schedule
             fechar();
             return ds;
         }
+        public void inserir(Dados.dados dc, string codigo)
+        {
+            conecta();
+            if (codigo == null)
+            {
+                strSql = "insert into cadastro values (" + " @name, @phone)";
+            }
+            cSql = new SqlCommand(strSql, con);
+            cSql.Parameters.AddWithValue("@name", dc.name);
+            cSql.Parameters.AddWithValue("@phone", dc.phone);
+
+            cSql.ExecuteNonQuery();
+            fechar();
+        }
+
+        public void AtualizarCliente()
+        {
+            conecta();
+            strSql = "select nome from cadastro order by name";
+            cSql = new SqlCommand(strSql, con);
+            reader = cSql.ExecuteReader();
+        }
     }
 }

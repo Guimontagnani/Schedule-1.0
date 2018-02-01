@@ -18,12 +18,11 @@ namespace Schedule
             //identificacao = id;
         }
         Conect conect = new Conect();
+        Dados.dados dc = new Dados.dados();
 
-        //string identificacao = null;
         DataSet ds = new DataSet();
         DataTable dt = new DataTable();
-        //int verificar = 0;
-        //int clique = 0;
+        
         public void Carrega()
         {
             ds = conect.selecionarNome(txb_name.Text);
@@ -34,7 +33,6 @@ namespace Schedule
                 {
                     txb_name.Text = row["name"].ToString();
                     txb_phone.Text = row["phone"].ToString();
-                    
                 }
             }
             else
@@ -44,12 +42,39 @@ namespace Schedule
         }
         private void Main_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'scheduleDataSet.cadastro' table. You can move, or remove it, as needed.
+            this.cadastroTableAdapter.Fill(this.scheduleDataSet.cadastro);
 
         }
 
         private void btn_search_Click(object sender, EventArgs e)
         {
             Carrega();
+        }
+
+        private void btn_grid_Click(object sender, EventArgs e)
+        {
+            All form = new All();
+            form.ShowDialog();
+        }
+
+        private void btn_insert_Click(object sender, EventArgs e)
+        {
+           
+            dc.name = txb_name.Text;
+            dc.phone = txb_phone.Text; 
+
+                    conect.inserir(dc, null);
+                    MessageBox.Show("CADASTRADO COM SUCESSO");
+                    txb_name.Text = "";
+                    txb_phone.Text = "";
+                
+    }
+
+        private void btn_able_Click(object sender, EventArgs e)
+        {
+            txb_phone.Enabled = true;
+            txb_phone.Text = "";
         }
     }
 }

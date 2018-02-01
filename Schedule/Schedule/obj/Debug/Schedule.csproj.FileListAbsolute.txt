@@ -7,3 +7,4 @@ C:\Users\Guilherme\Desktop\Schedule\Schedule\Schedule\bin\Debug\Schedule.exe
 C:\Users\Guilherme\Desktop\Schedule\Schedule\Schedule\bin\Debug\Schedule.pdb
 C:\Users\Guilherme\Desktop\Schedule\Schedule\Schedule\obj\Debug\Schedule.exe
 C:\Users\Guilherme\Desktop\Schedule\Schedule\Schedule\obj\Debug\Schedule.pdb
+C:\Users\Guilherme\Desktop\Schedule\Schedule\Schedule\obj\Debug\Schedule.All.resources
